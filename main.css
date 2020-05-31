@@ -34,7 +34,80 @@ body, html {width:100%; height:100%;}
 
 
 /* content */
-.cont{width: 100%; height: 93%; background: orange;}
+.cont{width: 100%; height: 93%; background: background: #373B44;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #373B44,#4286f4,);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #373B44, #4286f4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.cont .cont_nav{height:67px;}
+
+.cont .gallerylist{ background-color:white; margin:20px; text-align: center; position: relative;width:auto; height:auto;}
+ ul {
+     font-size: 0;
+ }
+
+ ul > li {
+     display: inline-block;
+     vertical-align: top;
+     width: 33%;
+
+ }
+
+ ul > li > a {
+     display: block;
+     width: auto;
+     text-decoration: none;
+    margin:17px; 
+}
+
+ ul > li > a .screen {
+     position: relative;
+     overflow: hidden;
+ }
+
+
+ ul > li > a .screen::after {
+     content: '';
+     display: block;
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.8);
+     z-index: 100;
+     opacity: 0;
+     transition: all .35s;
+ }
+
+ ul > li > a:hover .screen::after {
+     opacity: 1;
+ }
+
+ ul > li > a .screen .top {
+     width:100%;
+     position: absolute;
+     bottom: 150%;
+     left: 0px;
+     z-index: 101;
+     text-align: center;
+     color: white;
+     font-size: 12px;
+     font-weight: 900;
+     transition: all .35s;
+     text-transform:uppercase;
+}
+
+
+ ul > li > a .screen img {
+     width: 100%;
+     height: auto;
+ }
+
+ ul > li > a:hover .top {
+     bottom: 35%;
+ }
+ul>li>a .screen p{font-size:26px;text-align: center;}
 
 /* footer */
 
@@ -45,5 +118,5 @@ footer_wrap > div {display: table-cell; width: calc(50vw - 180px);}
 .footer .sns li{float: left; margin-right:30px; width:30px; height:40px;overflow:hidden;}
 .footer .sns li a{display: block; background-color:rgba(0,0,0,0.2);}
 .footer .sns li span{color:#fff; font-size:1px; line-height:0px;}
-.footer .copyright{ display:block;line-height: 10px; font-family: 'Camber-M';color:#6b6b6b;text-align: right; text-transform: uppercase;padding:10px 30px 0 0;}
+.footer .copyright{ position:absolute; top:0; right:0; display:block;line-height: 10px; font-family: 'Camber-M';color:#6b6b6b;text-align: right; text-transform: uppercase;padding:30px 30px 0 0;}
 .footer .copyright p span{white-space: nowrap;}
