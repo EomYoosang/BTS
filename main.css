@@ -35,7 +35,7 @@ body, html {width:100%; height:100%;}
 }
 
 /* header */
-.header {
+#header {
     width: 100%;
     min-width:320px;
     position: fixed;
@@ -45,10 +45,10 @@ body, html {width:100%; height:100%;}
     z-index: 2000;
 }
 
-.header .header_logo { display: inline-block;padding:13px; z-index:2001;}
-.header .header_menu{ display: none;}
-.header .header_menu ol{text-align: center;}
-.header .header_menu ol li{display: inline-block; color:rgb(235,235,235); font-size: 23px; text-transform: uppercase; padding: 0px 10px 10px 10px;}
+#header #header-logo { display: inline-block;padding:13px; z-index:2001;}
+#header #header-menu{display:none;}
+#header #header-menu ol{text-align: center;}
+#header #header-menu ol li{display: inline-block; color:rgb(235,235,235); font-size: 23px; text-transform: uppercase; padding: 0px 10px 10px 10px;}
 
 
 /* content */
@@ -65,17 +65,17 @@ body, html {width:100%; height:100%;}
     vertical-align: center;
     overflow: hidden;
 }
-.cont .cont_nav{height:auto;width:100%;text-align:center;}
-.cont .cont_nav .header_logo{display: block;padding:13px;}
-.cont .cont_base{ width: 100%; display: table; table-layout: fixed; overflow: hidden;}
-.cont .cont_base .member{display:table-cell; vertical-align: middle; border:3px solid #fff; overflow:hidden; background:#000; z-index:100;}
-.cont .cont_base .member .snip1131 {
+.cont .cont-nav{height:auto;width:100%;text-align:center;}
+.cont .cont-nav .header_logo{display: block;padding:13px;}
+.cont .cont-base{ width: 100%; display: table; table-layout: fixed; overflow: hidden;}
+.cont .cont-base .member{display:table-cell; vertical-align: middle; border:3px solid #fff; overflow:hidden; background:#000; z-index:100;}
+.cont .cont-base .member .snip1131 {
     position: relative;
     overflow:hidden;
     text-align: center;
     box-shadow: 0 0 5px rgba(0,0,0,0.15);
 }
-.cont .cont_base .member .snip1132 * {
+.cont .cont-base .member .snip1132 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-transition: all 0.45s ease-in-out;
@@ -83,13 +83,15 @@ body, html {width:100%; height:100%;}
     overflow: hidden;
 }
 
-.cont .cont_base .member .snip1132 a{}
+.cont .cont-base .member .snip1132 a{}
 
-.cont .cont_base .member .snip1132 img{
+.cont .cont-base .member .snip1132 input{width:100%;height:100%;position:absolute;top:0;left:0; background:rgba(0,0,0,0);}
+
+.cont .cont-base .member .snip1132 img{
     overflow: hidden;
 }
 
-.cont .cont_base #RM .snip1132 img.RM {
+.cont .cont-base #RM .snip1132 img.RM {
     position: relative;
     right:200px;
     bottom:100px;
@@ -98,13 +100,13 @@ body, html {width:100%; height:100%;}
 }
 
 
-.cont .cont_base #RM .snip1132:hover img.RM{
+.cont .cont-base #RM .snip1132:hover img.RM{
   opacity: 1;
   -webkit-transform: scale(1.15);
   transform: scale(0.9);
 }
 
-.cont .cont_base #SG .snip1132 img.SG {
+.cont .cont-base #SG .snip1132 img.SG {
     position: relative;
     right:250px;
     bottom:120px;
@@ -113,13 +115,13 @@ body, html {width:100%; height:100%;}
 }
 
 
-.cont .cont_base #SG .snip1132:hover img.SG{
+.cont .cont-base #SG .snip1132:hover img.SG{
   opacity: 1;
   -webkit-transform: scale(1.15);
   transform: scale(0.85);
 }
 
-.cont .cont_base #JH .snip1132 img.JH {
+.cont .cont-base #JH .snip1132 img.JH {
     position: relative;
     right:220px;
     bottom:120px;
@@ -127,13 +129,13 @@ body, html {width:100%; height:100%;}
     transform: scale(0.8);
 }
 
-.cont .cont_base #JH .snip1132:hover img.JH{
+.cont .cont-base #JH .snip1132:hover img.JH{
   opacity: 1;
   -webkit-transform: scale(1.15);
   transform: scale(0.85);
 }
 
-.cont .cont_base #Jin .snip1132 img.Jin {
+.cont .cont-base #Jin .snip1132 img.Jin {
     position: relative;
     right:165px;
     bottom:100px;
@@ -141,13 +143,13 @@ body, html {width:100%; height:100%;}
     transform: scale(0.8);
 }
 
-.cont .cont_base #Jin .snip1132:hover img.Jin{
+.cont .cont-base #Jin .snip1132:hover img.Jin{
   opacity: 1;
   -webkit-transform: scale(1.15);
   transform: scale(0.85);
 }
 
-.cont .cont_base #JK .snip1132 img.JK {
+.cont .cont-base #JK .snip1132 img.JK {
     position: relative;
     right:200px;
     bottom:100px;
@@ -155,13 +157,13 @@ body, html {width:100%; height:100%;}
     transform: scale(0.8);
 }
 
-.cont .cont_base #JK .snip1132:hover img.JK{
+.cont .cont-base #JK .snip1132:hover img.JK{
   opacity: 1;
   -webkit-transform: scale(1.15);
   transform: scale(0.85);
 }
 
-.cont .cont_base #V .snip1132 img.V {
+.cont .cont-base #V .snip1132 img.V {
     position: relative;
     right:230px;
     bottom:95px;
@@ -169,31 +171,59 @@ body, html {width:100%; height:100%;}
     transform: scale(0.8);
 }
 
-.cont .cont_base #V .snip1132:hover img.V{
+.cont .cont-base #V .snip1132:hover img.V{
   opacity: 1;
   -webkit-transform: scale(1.15);
   transform: scale(0.85);
 }
 
-.cont .cont_base #JM .snip1132 img.JM {
+.cont .cont-base #JM .snip1132 img.JM {
     position: relative;
     right:150px;
-    bottom:128px;
+    bottom:118px;
     opacity: 0.5;
     transform: scale(0.8);
 }
 
-.cont .cont_base #JM .snip1132:hover img.JM{
+.cont .cont-base #JM .snip1132:hover img.JM{
   opacity: 1;
   -webkit-transform: scale(1.15);
   transform: scale(0.85);
 }
 
-.cont .profile{}
+.cont #profile{background:#fff; position: absolute; top:50%; left:50%; transform: translate(-50%,-50%);width:80%; height:80%;overflow:hidden;}
+.cont #profile .dimmed {
+    z-index:10;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+.profile-inner{z-index: 15;}
+.profile-inner ul {width:100%; height:100%;}
+.profile-inner ul > li{width:100%;height:100%; }
+.profile-inner ul > li .photo {display:inline-block;}
+.profile-inner ul > li .photo img{ height:482px; width:auto; }
+
+.profile-inner ul > li .profile-contents{background:rgba(66,134,244,0.5); display:inline-block;}
+.profile-inner ul > li .btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90px;
+    height: 90px;
+    border-radius: 50vh;
+    background: rgba(0, 0, 0, 0.2) url("https://ibighit.com/bts/images/btn-close.png") no-repeat center;
+    background-size: 100% auto;
+    z-index: 20;
+}
 /* footer */
 
 .footer{position: relative; overflow: hidden; display: table; clear: both; background: #272727; width: 100%;  z-index:1000; }
-#profile{height: 7%;}
+#profile-footer{height: 7%;}
 #reguler{height:48px;}
 .footer > div {display: table-cell; vertical-align: middle;}
 .footer .sns{line-height: 10px; z-index: 1002;}
