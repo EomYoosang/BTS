@@ -35,37 +35,37 @@
         <div class="cont">
             <div class="cont-base">
 
-                <div class="member" id="RM" onclick="openProfile(this);">
+                <div class="member member-border" id="RM" onclick="openProfile(this);">
                     <div class="snip1132">
                         <img class="RM" src="https://post-phinf.pstatic.net/MjAxOTA1MjNfMjI0/MDAxNTU4NTcxNDMyODQ1.wcVLopbabYHorDy15m7p-D3WcHQRKjwYaZZdN7S37VEg.oexZ5-5QbnlHHWKyPXbPcp-bcok4oUSISwvkl3u1H5kg.PNG/image.png?type=w1200">
                     </div>
                 </div>
 
-                <div class="member" id="SG" onclick="openProfile(this);">
+                <div class="member member-border" id="SG" onclick="openProfile(this);">
                     <div class="snip1132 hover">
                         <img class="SG" src="https://post-phinf.pstatic.net/MjAxOTA1MjhfNzAg/MDAxNTU5MDM0MDcyMjMy.N4LjmWlbyJUsFtxcdNAi6HrsArKe8lGImRSyUQLV0J8g.7mgkpn45Y_g-34iMexf1e4IfuiwkVMkjLqcZ2-Ho80Yg.PNG/20190524064406871980.png?type=w1200">
                     </div>
                 </div>
 
-                <div class="member" id="JH" onclick="openProfile(this);">
+                <div class="member member-border" id="JH" onclick="openProfile(this);">
                     <div class="snip1132">
                         <img class="JH" src="https://image.ajunews.com/content/image/2019/05/27/20190527232518526458.png">
                     </div>
                 </div>
 
-                <div class="member" id="Jin" onclick="openProfile(this);">
+                <div class="member member-border" id="Jin" onclick="openProfile(this);">
                     <div class="snip1132">
                         <img class="Jin" src="https://post-phinf.pstatic.net/MjAxOTA1MjNfODUg/MDAxNTU4NTcxNzY5MjA2.QC8B6tDvdO9znhAuBvE31_wF_5XwH-ggTqN5ADMd4xAg.dAa2zFaoLuirIb-cuHelX6KNEojZsjM4u9uuubbA2PQg.PNG/image.png?type=w1200">
                     </div>
                 </div>
 
-                <div class="member" id="JK" onclick="openProfile(this);">
+                <div class="member member-border" id="JK" onclick="openProfile(this);">
                     <div class="snip1132">
                         <img class="JK" src="https://post-phinf.pstatic.net/MjAxOTA2MDNfMTM0/MDAxNTU5NTI2NTA1MzAx.XuF-o4F5rOFNbEtixnlXY_IBnNneVX3YH4A9oSJd2hMg.Qra0-BJ0uZDfeYYDMkJ0TTavxAXvb2k5HMjjkXoM6AIg.PNG/20190531140947613198.png?type=w1200">
                     </div>
                 </div>
 
-                <div class="member" id="V" onclick="openProfile(this);">
+                <div class="member member-border" id="V" onclick="openProfile(this);">
                     <div class="snip1132">
                         <img class="V" src="https://post-phinf.pstatic.net/MjAxOTA1MzBfMTIy/MDAxNTU5MTgwNTU3OTUy.B3fYaf02c4giz9cXihZ2YHS4isH8wNcYHpSncEBnNUcg.aM3lFa1WeB6jPMETDd5xcYplwVSHRA2PfxTljdHYFLAg.PNG/20190529221149385234.png?type=w1200">
                     </div>
@@ -162,7 +162,7 @@
                         <span class="ir_pm">트위터멤버</span>
                         <a class="twit" href="#" target="_blank" title="트위터(멤버)"></a></li>
 
-                    <li id="icon_circle"><a class="facebook" href="#" target="_blank" title="페이스북"></a><span class="ir_pm">v페북</span></li>
+                    <li id="icon_circle"><a class="facebook" href="#" target="_blank" title="페이스북"><img src="icon/facebook.png"></a></li>
 
                     <li id="icon_circle">
                         <span class="ir_pm">인스타</span>
@@ -210,8 +210,8 @@
     </div>
 </body>
 <script type="text/javascript">
+    /* header function */
     var btn = document.getElementById('header');
-
     function openMenu() {
         var box = document.getElementById('header-menu');
         if (box.style.display == 'none') {
@@ -223,9 +223,22 @@
 
     btn.addEventListener('click', openMenu, false);
 
+    
+    /* profile function */
     var members = document.getElementsByClassName('member');
-    var numMembers = members.length;
-
+    
+    function blurOn(){
+        for(var i=0;i<7;i++){
+            members[i].classList.add('blurEffect');
+        }
+    }
+    
+    function blurOff(){
+        for(var i=0;i<7;i++){
+            members[i].classList.remove('blurEffect');
+        }
+    }
+    
     function openProfile(event) {
         var inner=document.getElementsByClassName('profile-inner');
         var contents = inner[0].getElementsByTagName('li');
@@ -257,17 +270,17 @@
                 break;
         }
         
-        document.getElementsByClassName('cont_base')[0].classList.add('blurEffect');
+        blurOn();
         var profileDiv = document.getElementById('profile');
         profileDiv.style.display = 'block';
     }
 
-    for (var i = 0; i < numMembers; i++) {
+    for (var i = 0; i < 7; i++) {
         members[i].addEventListener('click', openProfile(), false);
     }
 
     function closeProfile() {
         document.getElementById('profile').style.display = "none";
-        document.getElementsByClassName('cont_base')[0].classList.delete('blurEffect');
+        blurOff();
     }
 </script></html>

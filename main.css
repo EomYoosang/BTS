@@ -3,19 +3,21 @@
 body, html {width:100%; height:100%;}
 
 #icon_circle {
+    margin:2px;
     background-color: #999;
-    width: 32px;
-    height: 32px;
-    border-radius: 16px;
+    width: 28px;
+    height: 28px;
+    border-radius: 14px;
     text-align: center;
 
 }
 
 #icon_circle2 {
+    margin:2px;
     background-color: rgb(100,100,100);
-    width: 32px;
-    height: 32px;
-    border-radius: 16px;
+    width: 28px;
+    height: 28px;
+    border-radius: 14px;
     text-align: center;
 }
 
@@ -68,7 +70,9 @@ body, html {width:100%; height:100%;}
 .cont .cont-nav{height:auto;width:100%;text-align:center;}
 .cont .cont-nav .header_logo{display: block;padding:13px;}
 .cont .cont-base{ width: 100%; display: table; table-layout: fixed; overflow: hidden;}
-.cont .cont-base .member{display:table-cell; vertical-align: middle; border:3px solid #fff; overflow:hidden; background:#000; z-index:100;}
+.cont .cont-base .member{display:table-cell; vertical-align: middle; overflow:hidden; background:#000; z-index:100;}
+.cont .cont-base .member-border{border-right:1px solid #fff;}
+.cont .cont-base .blurEffect{filter:blur(5px);}
 .cont .cont-base .member .snip1131 {
     position: relative;
     overflow:hidden;
@@ -208,7 +212,7 @@ body, html {width:100%; height:100%;}
 .profile-inner ul > li .photo {background:#fff;}
 .profile-inner ul > li > .photo > img{height:536px;}
 
-.profile-inner ul > li .profile-contents{width:536px; background:rgba(66,134,244,0.8); vertical-align: middle;text-align: left;}
+.profile-inner ul > li .profile-contents{padding-left: 30px; width:536px; background:rgba(66,134,244,0.8); vertical-align: middle;text-align: left;}
 .profile-inner ul > li .profile-contents h3{color:#fff; font-size:50px;}
 .profile-inner ul > li .btn-close {
     position: absolute;
@@ -231,12 +235,13 @@ body, html {width:100%; height:100%;}
 .footer .sns li{float: left; margin-right:10px; width:32px; height:32px;overflow:hidden; transform: scale(0.8);}
 .footer .sns .twit{background: url(/BTS/icon/icon.png);}
 .footer .sns .twit{background: url(icon/icon.png);}
-.footer .sns .facebook{background:url(icon/facebook.png)}
+.footer .sns .facebook{background:url(icon/facebook.png) width:32px; }
 .footer .sns .instagram{background:url(icon/instagram.png);}
 .footer .sns .youtube{background: url(icon/youtube.png);}
 .footer .sns li a{z-index: 1003; display: block; background-color:rgba(0,0,0,0.2); width:32px; height:32px;}
 .footer .sns li a:hover{background-color: #fff; }
 .footer .sns li span{color:#fff; font-size:1px;}
+.footer .sns li img{width:32px;}
 .footer .copyright{ font-size: 10px; font-family: 'Camber-M';
     color:#6b6b6b;text-align: right; text-transform: uppercase;}
 .footer .copyright p span{white-space: nowrap;}
