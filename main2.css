@@ -213,7 +213,8 @@ body, html {width:100%; height:100%;}
 .profile-inner ul > li > .photo > img{height:536px;}
 
 .profile-inner ul > li .profile-contents{padding-left: 30px; width:536px; background:rgba(0,0,0,0.6); vertical-align: middle;text-align: left;}
-.profile-inner ul > li .profile-contents h3{color:#fff; font-size:50px;}
+.profile-inner ul > li .profile-contents h3{color:#fff; font-size:40px;}
+.profile-inner ul > li .profile-contents p{padding-left: 6px; font-size: 13px; color:#fff;}
 .profile-inner ul > li .btn-close {
     position: absolute;
     top: 0;
