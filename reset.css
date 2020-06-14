@@ -16,7 +16,7 @@ a {
 
 /* 폰트 초기화 */
 body, input, textarea, select, button, table{
-    font-family:'Nanum Gothic', AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',snas-serif;
+    font-family:'Camber-R';
     color: #222;
     font-size: 13px;
     line-height: 1.5;
